@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gaming Store</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0d0d0d;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  background: black;
+  padding: 15px;
+  color: orange;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #1a1a1a;
+  margin: 15px;
+  padding: 20px;
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px orange;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.price {
+  color: lime;
+  font-size: 20px;
+}
+
+button {
+  background: orange;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: red;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🔥 Free Fire Store 🔥</h1>
+
+<div class="container">
+
+  <div class="card">
+    <h2>💎 100 Diamonds</h2>
+    <p class="price">₹80</p>
+    <button onclick="buy('100 Diamonds')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <h2>💎 310 Diamonds</h2>
+    <p class="price">₹240</p>
+    <button onclick="buy('310 Diamonds')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <h2>💎 520 Diamonds</h2>
+    <p class="price">₹400</p>
+    <button onclick="buy('520 Diamonds')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <h2>💎 1060 Diamonds</h2>
+    <p class="price">₹800</p>
+    <button onclick="buy('1060 Diamonds')">Buy Now</button>
+  </div>
+
+</div>
+
+<script>
+function buy(item) {
+  let number = "6200709748"; //  
+  let message = "Hello, I want to buy " + item;
+  let url = "https://wa.me/" + number + "?text=" + encodeURIComponent(message);
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
